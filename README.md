@@ -146,7 +146,7 @@ Benchmarked on an Intel i7 / 16GB RAM testing a 1,000-product e-commerce catalog
 ## 📁 Repository Blueprint
 
 ```
-ominiai-web-scraper-extension/
+ominiai-web-scraper/
 │
 ├── extension/                       # Production Extension Source
 │   ├── manifest.config.ts          # Store-validated MV3 configuration (Edge/Chrome compliant)
@@ -187,8 +187,8 @@ ominiai-web-scraper-extension/
 
 ```bash
 # Clone the repository
-git clone https://github.com/<YOUR-USERNAME>/ominiai-web-scraper-extension.git
-cd ominiai-web-scraper-extension/extension
+git clone https://github.com/vijju9019/ominiai-web-scraper.git
+cd ominiai-web-scraper/extension
 
 # Install dependencies
 npm install
@@ -238,11 +238,10 @@ This project demonstrates proficiency across the full frontend and browser-engin
 ---
 
 <div align="center">
-  <p>Crafted with engineering precision by <strong>Vijay Purandare</strong></p>
+  <p>Crafted with engineering precision by <strong>Vijay Purandare (@vijju9019)</strong></p>
   <p>
-    <a href="https://github.com"><img src="https://img.shields.io/badge/GitHub-Profile-181717?style=flat-square&logo=github" alt="GitHub" /></a>
-    <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin" alt="LinkedIn" /></a>
-    <a href="mailto:developer@ominiai.local"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+    <a href="https://github.com/vijju9019"><img src="https://img.shields.io/badge/GitHub-vijju9019-181717?style=flat-square&logo=github" alt="GitHub" /></a>
+    <a href="mailto:purandarevijay123@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
   </p>
   <p>&copy; 2026 OminiAI. Licensed under the MIT License.</p>
 </div>
