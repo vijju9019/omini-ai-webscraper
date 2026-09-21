@@ -187,7 +187,7 @@ ominiai-web-scraper/
 
 ```bash
 # Clone the repository
-git clone https://github.com/vijju9019/ominiai-web-scraper.git
+git clone https://github.com/vijju9019/omini-ai-webscraper.git
 cd ominiai-web-scraper/extension
 
 # Install dependencies
