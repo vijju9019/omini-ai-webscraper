@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniScrape AI - Free Web Scraper & ML Data Extractor for Microsoft Edge & Chrome</title>
+  <meta name="description" content="Turn any website into clean, structured datasets in 2 clicks. Auto-detect repeated elements, crawl multi-page catalogs, and export ML-ready tables to Excel, CSV, and JSON. 100% free and private.">
+  <meta name="keywords" content="web scraper, instant data scraper, data extractor, table scraper, excel export, ai web scraper, lead generation, browser extension">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OmniScrape AI - Free AI Web Scraper & Data Extractor">
+  <meta property="og:description" content="Auto-detect any page, deep scrape product details, crawl multi-page lists, and export clean datasets to Excel, CSV, and JSON.">
+  <meta property="og:image" content="assets/logo-512.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="brand" id="nav-brand">
+        <img src="assets/logo-300.png" alt="OmniScrape AI Logo" class="brand-logo">
+        <span>OmniScrape <span style="color: var(--accent-cyan);">AI</span></span>
+        <span class="brand-badge">Manifest V3</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#simulator" class="nav-link">Live Demo</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#install" class="nav-link">Install</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#install" class="btn btn-secondary btn-sm" id="nav-btn-zip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download .ZIP
+        </a>
+        <a href="#install" class="btn btn-edge btn-sm" id="nav-btn-edge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+          </svg>
+          Add to Edge
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      
+      <div class="hero-pill">
+        <span class="hero-pill-indicator"></span>
+        <span class="hero-pill-text">100% Free & Unlimited • Client-Side Extraction • Zero Tracking</span>
+      </div>
+
+      <h1 class="hero-title">
+        Turn Any Website Into Clean, <br>
+        <span class="gradient-text">ML-Ready Data in 2 Clicks</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Automate web scraping with intelligent DOM pattern recognition. Auto-detect repeated cards, crawl multi-page catalogs, and export straight to Excel (.xlsx), CSV, or JSON without writing code.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#simulator" class="btn btn-primary btn-lg" id="hero-btn-demo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Try Live Sandbox
+        </a>
+        <a href="#install" class="btn btn-secondary btn-lg" id="hero-btn-install">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Get Extension
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>100% Private:</strong> Data stays in your browser</span>
+        </div>
+        <div class="hero-stat-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span><strong>Zero Limits:</strong> No credits or paywalls</span>
+        </div>
+        <div class="hero-stat-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <span><strong>Export Ready:</strong> Excel, CSV (BOM), JSON, TSV</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Live Simulator -->
+  <section class="simulator-section" id="simulator">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Interactive Sandbox</span>
+        <h2 class="section-title">See How OmniScrape AI Extracts Web Pages</h2>
+        <p class="section-subtitle">
+          Test the automated element clustering, column classifier, and instant dataset export right here in your browser.
+        </p>
+      </div>
+
+      <div class="browser-window">
+        <!-- Mock Browser Header -->
+        <div class="browser-header">
+          <div class="browser-controls">
+            <span class="control-dot dot-red"></span>
+            <span class="control-dot dot-yellow"></span>
+            <span class="control-dot dot-green"></span>
+          </div>
+          <div class="browser-address-bar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span id="mock-address">https://techmart.store/products/gadgets</span>
+          </div>
+          <div class="preset-switcher">
+            <button class="preset-btn active" data-preset="ecommerce" id="btn-preset-ecom">E-Commerce</button>
+            <button class="preset-btn" data-preset="jobs" id="btn-preset-jobs">Tech Jobs</button>
+            <button class="preset-btn" data-preset="realestate" id="btn-preset-realestate">Real Estate</button>
+          </div>
+        </div>
+
+        <!-- Simulator Split Screen -->
+        <div class="simulator-body">
+          
+          <!-- Left Pane: Target Webpage -->
+          <div class="webpage-view">
+            <div class="webpage-toolbar">
+              <span class="webpage-brand-title" id="webpage-title">TechMart Online Store</span>
+              <span style="font-size: 0.8rem; color: var(--text-subtle);">Showing 4 matching items</span>
+            </div>
+
+            <div class="webpage-mock-cards" id="mock-card-container">
+              <!-- Cards dynamically populated by app.js -->
+            </div>
+          </div>
+
+          <!-- Right Pane: Simulated OmniScrape Side Panel -->
+          <div class="extension-view">
+            <div class="ext-header">
+              <div class="ext-title">
+                <img src="assets/logo-300.png" width="22" height="22" alt="Logo" style="border-radius: 6px;">
+                <span>OmniScrape Side Panel</span>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 600;">ACTIVE TAB</span>
+            </div>
+
+            <div class="ext-tabs">
+              <div class="ext-tab active">Extract</div>
+              <div class="ext-tab">Fields</div>
+              <div class="ext-tab">Pagination</div>
+            </div>
+
+            <div class="ext-content">
+              
+              <!-- Quick Action Card -->
+              <div class="control-card">
+                <div class="action-row">
+                  <button class="btn btn-secondary btn-sm" id="btn-sim-detect">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    Auto-Detect
+                  </button>
+                  <button class="btn btn-primary btn-sm" id="btn-sim-extract">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Extract Data
+                  </button>
+                </div>
+
+                <div class="status-box">
+                  <span class="status-label">Cluster Status:</span>
+                  <span class="status-value" id="status-cluster">Idle (Ready)</span>
+                </div>
+              </div>
+
+              <!-- Live Extracted Data Table Preview -->
+              <div class="preview-table-wrapper">
+                <table class="preview-table">
+                  <thead>
+                    <tr>
+                      <th>TITLE</th>
+                      <th>PRICE</th>
+                      <th>RATING</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="3" style="text-align: center; color: #64748b; padding: 24px;">
+                        Click "Auto-Detect" or "Extract Data" above to simulate live scraping
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Live Real Export Download Bar -->
+              <div class="export-bar">
+                <span class="export-tag">Export:</span>
+                <button class="btn-export btn-export-excel" id="export-excel" title="Download Excel (.xls)">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+                  Excel (.xls)
+                </button>
+                <button class="btn-export" id="export-csv" title="Download CSV with UTF-8 BOM">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  CSV
+                </button>
+                <button class="btn-export" id="export-json" title="Download JSON file">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  JSON
+                </button>
+                <button class="btn-export" id="export-copy" title="Copy Tab-Separated Values for Google Sheets">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Copy TSV
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Core Features Grid -->
+  <section class="features-section" id="features">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Key Capabilities</span>
+        <h2 class="section-title">Built for Speed, Accuracy, and Scale</h2>
+        <p class="section-subtitle">
+          Everything you need to gather high-quality training datasets, competitor intelligence, and market listings.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+          </div>
+          <h3 class="feature-title">Intelligent Pattern Clustering</h3>
+          <p class="feature-desc">
+            Our sibling DOM similarity algorithm groups recurring cards, list items, and tabular layouts automatically with sub-second accuracy.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-emerald">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Semantic Field Classification</h3>
+          <p class="feature-desc">
+            Auto-labels columns into clean schema definitions: product names, retail prices, currency, star ratings, timestamps, and full image URLs.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="13 17 18 12 13 7"></polyline>
+              <polyline points="6 17 11 12 6 7"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Multi-Strategy Pagination</h3>
+          <p class="feature-desc">
+            Crawls multi-page lists effortlessly. Supports "Next Page" pagination, dynamic "Load More" clickers, and automated infinite scrolling with lazy-load settling.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-amber">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Universal Format Export</h3>
+          <p class="feature-desc">
+            Export directly to Excel (.xlsx) with auto-fitted columns, RFC-4180 CSV with UTF-8 BOM, developer JSON, or 1-click clipboard paste for Google Sheets.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Interactive Visual Picker</h3>
+          <p class="feature-desc">
+            Want specific elements? Use the point-and-click picker with hierarchy navigation (`ArrowUp` / `ArrowDown`) to target any DOM element with pixel accuracy.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">100% Client-Side Privacy</h3>
+          <p class="feature-desc">
+            No remote cloud proxy, no account registration, and zero third-party telemetry. All scraped content stays strictly inside your browser.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-section" id="how-it-works">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Simple Workflow</span>
+        <h2 class="section-title">Extract Web Data in 3 Effortless Steps</h2>
+        <p class="section-subtitle">
+          No proxies to configure, no Python scripts to maintain, and no subscriptions.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Open the Side Panel</h3>
+          <p class="step-desc">
+            Navigate to any website in Microsoft Edge or Chrome, then click the OmniScrape icon to open the native side panel alongside your target page.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Detect & Customize</h3>
+          <p class="step-desc">
+            Click <strong>Auto-Detect</strong> to let the AI highlight repeated cards and classify columns, or click on any card directly with the visual element picker.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Crawl & Export</h3>
+          <p class="step-desc">
+            Set your page limits, click <strong>Start Extraction</strong>, and download your clean, structured dataset in Excel (.xlsx), CSV, or JSON format.
+          </p>
+        </div>
+      </div>
+
+      <!-- Compliance & Privacy Trust Banner -->
+      <div class="compliance-banner">
+        <div class="compliance-info">
+          <div class="compliance-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="compliance-text">
+            <h3>Designed for Store Compliance & User Privacy</h3>
+            <p>
+              OmniScrape AI operates strictly within modern Manifest V3 guidelines. It does not collect cookies, passwords, browsing history, or personal identifiable information.
+            </p>
+          </div>
+        </div>
+        <a href="privacy.html" class="btn btn-secondary btn-sm" style="white-space: nowrap;">
+          Read Privacy Policy
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Installation Section -->
+  <section class="install-section" id="install" style="padding: 70px 0;">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Get Started</span>
+        <h2 class="section-title">Install OmniScrape AI</h2>
+        <p class="section-subtitle">
+          Choose your preferred installation method below.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto;">
+        
+        <!-- Option 1: Microsoft Edge Store -->
+        <div class="feature-card" style="border-color: rgba(0, 188, 242, 0.4);">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span class="brand-badge" style="background: rgba(0, 188, 242, 0.2); color: #38bdf8; border-color: rgba(0, 188, 242, 0.4);">RECOMMENDED</span>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#00bcf2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </div>
+          <h3 class="feature-title">Microsoft Edge Add-ons</h3>
+          <p class="feature-desc">
+            Install directly from the official Microsoft Edge Add-ons store with automatic updates and verified safety.
+          </p>
+          <a href="#" class="btn btn-edge" style="margin-top: auto;">
+            Add to Microsoft Edge
+          </a>
+        </div>
+
+        <!-- Option 2: Developer Mode / ZIP -->
+        <div class="feature-card">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span class="brand-badge">DEVELOPER BUILD</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <h3 class="feature-title">Manual ZIP Installation</h3>
+          <p class="feature-desc">
+            Download the pre-compiled distribution archive and load unpacked in <code>edge://extensions/</code> or <code>chrome://extensions/</code>.
+          </p>
+          <a href="omniscrape-ai.zip" download class="btn btn-secondary" style="margin-top: auto;">
+            Download omniscrape-ai.zip
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">Common Questions & Answers</h2>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>Is OmniScrape AI completely free to use?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            Yes! OmniScrape AI is 100% free with no hidden credit systems, paywalls, or row limitations. Because data extraction runs entirely inside your browser using client-side JavaScript, there are no expensive server costs passed to you.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Does it work on websites with dynamic JavaScript and Infinite Scroll?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            Yes. OmniScrape AI features automated mutation settling and dynamic scrolling that stimulates `IntersectionObserver` triggers, allowing it to seamlessly scrape Single-Page Applications (React, Vue, Angular), infinite scroll feeds, and AJAX-loaded catalogs.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Where is my scraped data stored?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            Your data is stored exclusively in your local browser memory and downloaded directly to your computer. We do not operate remote tracking servers or collect your data.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What export formats are supported?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <div class="faq-answer">
+            You can export to Microsoft Excel (.xlsx) with auto-formatted column headers, CSV with standard UTF-8 Byte Order Mark (BOM) to prevent character distortion in spreadsheets, clean JSON, or direct clipboard copy (TSV) for instant pasting into Google Sheets.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="assets/logo-300.png" alt="Logo" class="brand-logo">
+            <span>OmniScrape AI</span>
+          </div>
+          <p class="footer-desc">
+            The free, developer-grade web scraping extension for Microsoft Edge and Google Chrome. Extract, clean, and export web data with zero friction.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#simulator">Live Demo</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#install">Download</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal & Store</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/" target="_blank" rel="noopener">Edge Add-ons Docs</a></li>
+              <li><a href="https://developer.chrome.com/docs/extensions/mv3/" target="_blank" rel="noopener">Manifest V3 Spec</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 OmniScrape AI. All rights reserved.</span>
+        <span>Built with Chrome Manifest V3 &bull; Edge Add-ons Compliant</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

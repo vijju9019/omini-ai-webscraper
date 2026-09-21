@@ -1,0 +1,25 @@
+{
+  "name": "omniscrape-ai",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "check": "tsc --noEmit",
+    "package": "npm run build && powershell -Command \"Compress-Archive -Path dist\\* -DestinationPath omniscrape-ai.zip -Force\""
+  },
+  "dependencies": {
+    "@crxjs/vite-plugin": "^2.7.1",
+    "@types/chrome": "^0.0.307",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
