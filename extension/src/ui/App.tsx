@@ -13,6 +13,8 @@ import { Header } from "./components/Header";
 import { Icons } from "./components/Icons";
 import { PaginationConfig } from "./components/PaginationConfig";
 import { PreviewTable } from "./components/PreviewTable";
+import { BatchModal } from "./components/BatchModal";
+import { formatTimestamp, getExportData } from "../shared/exportUtils";
 import "./styles.css";
 
 async function sendRequest(message: RequestMessage): Promise<ResponseMessage> {
@@ -69,6 +71,14 @@ export const App: React.FC = () => {
   const [isScanning, setIsScanning] = useState(false);
   const [isPicking, setIsPicking] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
+  const [showBatchModal, setShowBatchModal] = useState(false);
+  const [isBatchRunning, setIsBatchRunning] = useState(false);
+  const [batchProgress, setBatchProgress] = useState<{
+    current: number;
+    total: number;
+    currentUrl: string;
+    rowCount: number;
+  } | null>(null);
 
   // Poll stored job state at high frequency & track active tab host
   const syncJob = useCallback(async () => {
@@ -482,6 +492,7 @@ export const App: React.FC = () => {
       <Header
         onDiscover={handleDiscover}
         onPick={handlePickCollection}
+        onOpenBatch={() => setShowBatchModal(true)}
         isScraping={isScraping}
         isDiscovering={isScanning}
       />

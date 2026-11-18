@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "check": "tsc --noEmit",
-    "package": "npm run build && powershell -Command \"Compress-Archive -Path dist\\* -DestinationPath omniscrape-ai.zip -Force\""
+    "package": "npm run build && node ../scripts/package-extension.js"
   },
   "dependencies": {
     "@crxjs/vite-plugin": "^2.7.1",

@@ -4,6 +4,7 @@ import { Icons } from "./Icons";
 interface HeaderProps {
   onDiscover: () => void;
   onPick: () => void;
+  onOpenBatch: () => void;
   isScraping: boolean;
   isDiscovering: boolean;
 }
@@ -11,6 +12,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   onDiscover,
   onPick,
+  onOpenBatch,
   isScraping,
   isDiscovering,
 }) => {
@@ -50,9 +52,21 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="header-actions">
         <button
           className="btn-secondary btn-sm"
+          onClick={onOpenBatch}
+          disabled={isScraping || isDiscovering}
+          title="Scrape multiple websites in batch mode"
+          style={{ borderRadius: 6 }}
+        >
+          <Icons.Layers />
+          <span>Batch URLs</span>
+        </button>
+
+        <button
+          className="btn-secondary btn-sm"
           onClick={onPick}
           disabled={isScraping || isDiscovering}
           title="Pick an element directly on the webpage"
+          style={{ borderRadius: 6 }}
         >
           <Icons.Crosshair />
           <span>Pick Item</span>
@@ -63,6 +77,7 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={onDiscover}
           disabled={isScraping || isDiscovering}
           title="Detect structured repeating data on current page"
+          style={{ borderRadius: 6 }}
         >
           {isDiscovering ? <Icons.Refresh /> : <Icons.Search />}
           <span>{isDiscovering ? "Scanning…" : "Detect"}</span>
