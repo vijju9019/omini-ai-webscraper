@@ -14,3 +14,7 @@ cloudflared.exe
 *.exe
 .env
 .env.local
+
+.edge-*
+exports/
+

@@ -17,28 +17,28 @@ const PRESETS = {
       {
         title: 'Keychron Q1 Pro Wireless Custom Mechanical Keyboard',
         price: '$199.00',
-        rating: '4.9 ★ (1,420)',
+        category: 'Electronics',
         category: 'Electronics',
         stock: 'In Stock'
       },
       {
         title: 'Sony WH-1000XM5 Noise Canceling Headphones',
         price: '$348.00',
-        rating: '4.7 ★ (8,940)',
+        category: 'Audio',
         category: 'Audio',
         stock: 'In Stock'
       },
       {
         title: 'Logitech MX Master 3S Ergonomic Mouse',
         price: '$99.99',
-        rating: '4.8 ★ (12,300)',
+        category: 'Accessories',
         category: 'Accessories',
         stock: 'Low Stock'
       },
       {
         title: 'Apple iPad Pro 11-inch M4 Ultra Retina Display',
         price: '$999.00',
-        rating: '4.9 ★ (3,150)',
+        category: 'Computers',
         category: 'Computers',
         stock: 'In Stock'
       }
@@ -216,7 +216,7 @@ function renderMockCards() {
         <div class="mock-title">${item.title}</div>
         <div class="mock-meta">
           <span class="mock-price">${item.price}</span>
-          <span class="mock-rating">${item.rating}</span>
+          <span class="mock-category">${item.category}</span>
         </div>
       `;
     } else if (currentPresetKey === 'jobs') {
@@ -225,7 +225,7 @@ function renderMockCards() {
         <div style="font-size:0.75rem; color: #94a3b8;">${item.company} • ${item.location}</div>
         <div class="mock-meta" style="margin-top: 6px;">
           <span class="mock-price" style="font-size:0.75rem;">${item.salary}</span>
-          <span style="font-size:0.7rem; background:rgba(99,102,241,0.2); padding:2px 6px; border-radius:4px; color:#a5b4fc;">${item.type}</span>
+          <span style="font-size:0.7rem; background:rgba(37,99,235,0.15); padding:2px 6px; border-radius:4px; color:#60a5fa;">${item.type}</span>
         </div>
       `;
     } else {

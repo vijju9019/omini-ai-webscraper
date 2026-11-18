@@ -1,0 +1,25 @@
+{
+  "name": "omini-ai-webscraper",
+  "version": "1.0.0",
+  "description": "Autonomous Web Data Extraction Engine & ML Pipeline",
+  "main": "scripts/scrape.js",
+  "scripts": {
+    "scrape": "node scripts/scrape.js",
+    "serve": "node website/serve.js",
+    "snapshots": "node scripts/capture-snapshots.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijju9019/omini-ai-webscraper.git"
+  },
+  "keywords": [
+    "web-scraper",
+    "dataset-generator",
+    "excel-export",
+    "csv-export",
+    "dom-clustering",
+    "manifest-v3"
+  ],
+  "author": "",
+  "license": "MIT"
+}
